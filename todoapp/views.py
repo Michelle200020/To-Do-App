@@ -27,7 +27,7 @@ def deleteTodoView(request, id):
 def updateTodoView(request,id):
     
     updated_content = request.POST.get('updated_content')
-    print(f"heyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy{updated_content}")
+    print(f"{updated_content}")
     if updated_content!='':
         TodoListItem.objects.filter(pk=id).update(content=updated_content)
  
